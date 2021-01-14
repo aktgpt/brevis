@@ -6,7 +6,10 @@ In this repository we provide the code base that accompanies the paper:
 
 #### by Håkan Wieslander, Ankit Gupta, Ebba Bergman, Erik Hallström and Philip J Harrison
 
-
+<p>
+    <img src="overview.png" alt="drawing" style="width:1200px;"/>
+    <center>Proposed reconstruction methodology for fluorescent images. (A) Cell cultures imaged with bright-field microscopy. (B) Each fluorescent channel was reconstructed with a specialized neural network. The nuclei reconstruction model employed Learning Using Privileged Information (LUPI), where cell segmentation masks were utilized as privileged information. Lipid reconstruction made use of an adversarial training scheme and the cytoplasm reconstruction was based solely on the image reconstruction loss. (C) Reconstructed fluorescent images from bright-field..</center>
+</p>
 
 The content and structure of the repo is given by the following: 
 
