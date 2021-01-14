@@ -1,6 +1,6 @@
 {
   "gpu_device":"2,3",
-  "exp_folder": "/scratch-shared/phil/post_competition/noGAN3",
+  "exp_folder": "exps",
   "run_mode": "train",
   "test": {
     "tester": "BaseTester",
