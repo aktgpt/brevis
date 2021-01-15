@@ -9,7 +9,7 @@
     "train": {
       "trainer": "raLSGANTrainer",
       "save_name": "split2",
-      "epochs": 2900,
+      "epochs": 1900,
       "save_interval": 100,
       "early_stop": 10,
       "pretrain": true,
