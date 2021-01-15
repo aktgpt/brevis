@@ -13,7 +13,7 @@ In this repository we provide the code base that accompanies the paper:
 
 <p>
     <img src="final_results.png" alt="drawing" style="width:1200px;"/>
-    <center>Comparison of images generated from the bright-field z-stack and the ground truth fluorescence images. \textbf{A-C}. Generated images for the nuclei, lipid droplets and cytoplasm, with zoomed in regions showing some well reconstructed areas alongside some more problematic locations. \textbf{D-F} Ground truth images with corresponding zoomed in regions. \textbf{G} Maximum projection of the bright-field z-stack with corresponding zoomed in regions.</center>
+    <center>Comparison of images generated from the bright-field z-stack and the ground truth fluorescence images. (A-C) Generated images for the nuclei, lipid droplets and cytoplasm, with zoomed in regions showing some well reconstructed areas alongside some more problematic locations. (D-F) Ground truth images with corresponding zoomed in regions. (G) Maximum projection of the bright-field z-stack with corresponding zoomed in regions.</center>
 </p>
 
 The content and structure of the repo is given by the following: 
