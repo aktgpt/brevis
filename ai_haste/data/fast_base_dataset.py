@@ -111,11 +111,11 @@ class FastBaseDataset(Dataset):
                 preprocess_step = "standardize"
                 image = (image - self.brightfield_means) / self.brightfield_stds
                 if self.output_channel != "all":
+                    channel_idx = channel_name_to_idx(self.output_channel)
                     preprocess_stats = [
                         self.fluorecscent_means[channel_idx],
                         self.fluorecscent_stds[channel_idx],
                     ]
-                    channel_idx = channel_name_to_idx(self.output_channel)
                     target = (
                         target - self.fluorecscent_means[channel_idx]
                     ) / self.fluorecscent_stds[channel_idx]
