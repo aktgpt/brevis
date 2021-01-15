@@ -8,7 +8,12 @@ In this repository we provide the code base that accompanies the paper:
 
 <p>
     <img src="overview.png" alt="drawing" style="width:1200px;"/>
-    <center>Proposed reconstruction methodology for fluorescent images. (A) Cell cultures imaged with bright-field microscopy. (B) Each fluorescent channel was reconstructed with a specialized neural network. The nuclei reconstruction model employed Learning Using Privileged Information (LUPI), where cell segmentation masks were utilized as privileged information. Lipid reconstruction made use of an adversarial training scheme and the cytoplasm reconstruction was based solely on the image reconstruction loss. (C) Reconstructed fluorescent images from bright-field..</center>
+    <center>Proposed reconstruction methodology for fluorescent images. (A) Cell cultures imaged with bright-field microscopy. (B) Each fluorescent channel was reconstructed with a specialized neural network. The nuclei reconstruction model employed Learning Using Privileged Information (LUPI), where cell segmentation masks were utilized as privileged information. Lipid reconstruction made use of an adversarial training scheme and the cytoplasm reconstruction was based solely on the image reconstruction loss. (C) Reconstructed fluorescent images from bright-field.</center>
+</p>
+
+<p>
+    <img src="final_results.png" alt="drawing" style="width:1200px;"/>
+    <center>Comparison of images generated from the bright-field z-stack and the ground truth fluorescence images. \textbf{A-C}. Generated images for the nuclei, lipid droplets and cytoplasm, with zoomed in regions showing some well reconstructed areas alongside some more problematic locations. \textbf{D-F} Ground truth images with corresponding zoomed in regions. \textbf{G} Maximum projection of the bright-field z-stack with corresponding zoomed in regions.</center>
 </p>
 
 The content and structure of the repo is given by the following: 
