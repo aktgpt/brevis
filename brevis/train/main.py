@@ -1,4 +1,4 @@
-from ai_haste import train as train
+from brevis import train as train
 
 
 def run(config, train_dataloader, valid_dataloader, models, criterions, save_folder):

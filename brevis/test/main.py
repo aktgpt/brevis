@@ -1,4 +1,4 @@
-from ai_haste import test as test
+from brevis import test as test
 
 
 def run(config, dataloader, models, save_folder):

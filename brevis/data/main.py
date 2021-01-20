@@ -1,5 +1,5 @@
-# import ai_haste.data as data
-from ai_haste import data as data
+# import brevis.data as data
+from brevis import data as data
 from torch.utils.data import DataLoader
 import os
 import torch

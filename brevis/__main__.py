@@ -3,8 +3,8 @@ import json
 import os
 import random
 
-import ai_haste.exploratory_analysis as exp_analysis
-import ai_haste.main as main
+import brevis.exploratory_analysis as exp_analysis
+import brevis.main as main
 import numpy as np
 import torch
 

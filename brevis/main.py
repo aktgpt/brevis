@@ -1,8 +1,8 @@
 import json
 import os
 
-import ai_haste.loss as loss
-import ai_haste.model as model
+import brevis.loss as loss
+import brevis.model as model
 
 from .data import main as data
 from .test import main as test
