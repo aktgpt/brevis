@@ -41,7 +41,10 @@ The data should be structured as:
 ```sh
 .
 |--"adipocyte_data"       :Base folder where images are stored
-|   |-- "60x images"    :What magnification the images are images at
+|   |-- "60x images"      :What magnification the images are images at
+    |-- "masks"           :where the nuclei masks are stored
+        |-- "60x images"
+            |-- "Nuclei"
 ```
 
 

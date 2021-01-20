@@ -12,8 +12,6 @@ def run(config):
         os.makedirs(exp_stats_folder)
     centroid_extractor = CentroidExtractor(data_folder, exp_stats_folder)
     centroid_extractor.get_centroids()
-    # data_splitter = DataSplitter(data_folder, exp_stats_folder)
-    # data_splitter.make_split()
     # exp_stats_getter = ExperimentStatsGetter(data_folder, exp_stats_folder)
     # exp_stats_getter.get_stats()
 
