@@ -187,7 +187,7 @@ class BaseTester:
             mean = preprocess_stats[0].cuda()
             std = preprocess_stats[1].cuda()
             output = (
-                ((output * std) + mean).cpu().numpy().transpose(1, 2, 0).astype(np.uint16)
+                ((output * std) + mean).cpu().clamp(0, 65535).numpy().transpose(1, 2, 0).astype(np.uint16)
             )
         else:
             output = (output * 65535).cpu().numpy().transpose(1, 2, 0).astype(np.uint16)
