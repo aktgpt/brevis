@@ -9,12 +9,12 @@ https://www.biorxiv.org/content/10.1101/2021.01.18.427121v1
 #### by Håkan Wieslander, Ankit Gupta, Ebba Bergman, Erik Hallström and Philip J Harrison
 
 <p>
-    <img src="overview.png" alt="drawing" style="width:1200px;"/>
+    <img src="readme_images/overview.png" alt="drawing" style="width:1200px;"/>
     <center>Proposed method and workflow. Cell cultures are imaged by fluorescence and bright-field imaging. These images are used to train and compare specialized models for generating each stain, based on biologically relevant features. The selected models are then used to virtually stain bright-field images.</center>
 </p>
 
 <p>
-    <img src="final_results.png" alt="drawing" style="width:1200px;"/>
+    <img src="readme_images/final_results.png" alt="drawing" style="width:1200px;"/>
     <center>Comparison of images generated from the bright-field z-stack and the ground truth fluorescence images. (A-C) Generated images for the nuclei, lipid droplets and cytoplasm, with zoomed in regions showing some well reconstructed areas alongside some more problematic locations. (D-F) Ground truth images with corresponding zoomed in regions. (G) Maximum projection of the bright-field z-stack with corresponding zoomed in regions.</center>
 </p>
 

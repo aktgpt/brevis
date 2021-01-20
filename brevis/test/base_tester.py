@@ -80,7 +80,7 @@ class BaseTester:
                     output[0], image_name, preprocess_step, preprocess_stats
                 )
 
-                MAEs.append(
+                MAEs.append( 
                     (
                         MAE_criterion(
                             output.float(),

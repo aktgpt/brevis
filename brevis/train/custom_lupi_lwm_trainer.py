@@ -192,7 +192,7 @@ class CustomLUPILWMTrainer:
                 losses.append(loss_class.item())
                 loss += criterion["weight"] * loss_class
 
-            loss.backward()
+            loss.backward() 
             # torch.nn.utils.clip_grad_norm_(self.model.parameters(), 1)
             self.optimizer.step()
             if self.lr_scheduler:

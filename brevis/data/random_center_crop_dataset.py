@@ -65,25 +65,38 @@ class RandomCenterCropDataset(Dataset):
         self.getstats(magnification)
 
         ## Get input patch of image and create stack of 7 brightfield images
-        input_path = (
-            os.path.splitext(
-                os.path.join(
-                    self.folder, mag_path, self.data.iloc[[idx]]["brightfield"].item(),
-                )
-            )[0]
-            + ".npy"
-        )
+        # input_path = (
+        #     os.path.splitext(
+        #         os.path.join(
+        #             self.folder, mag_path, self.data.iloc[[idx]]["brightfield"].item(),
+        #         )
+        #     )[0]
+        #     + ".npy"
+        # )
 
-        image = np.load(input_path)
+        # image = np.load(input_path)
+
+        input_path = os.path.join(
+            self.folder, mag_path, self.data.iloc[[idx]]["brightfield"].item(),
+        )
+        image = []
+        for Z_nr in range(1, 8):
+            image.append(cv2.imread(input_path.replace("Z01", "Z0" + str(Z_nr)), -1))
+
+        image = np.array(image).transpose(1, 2, 0).astype("float")
 
         ## Get output patch of image and create target (either 3 channels or 1 channel)
         if self.output_channel != "all":
+            # target_name = self.data.iloc[[idx]][self.output_channel].item()
+            # target_path = (
+            #     os.path.splitext(os.path.join(self.folder, mag_path, target_name))[0]
+            #     + ".npy"
+            # )
+            # target = np.load(target_path)
             target_name = self.data.iloc[[idx]][self.output_channel].item()
-            target_path = (
-                os.path.splitext(os.path.join(self.folder, mag_path, target_name))[0]
-                + ".npy"
-            )
-            target = np.load(target_path)
+            target_path = os.path.join(self.folder, mag_path, target_name,)
+            target = cv2.imread(target_path, -1).astype("float")
+
             mask_mag_path = magnification + "_images"
             mask_path = os.path.join(
                 self.folder,
@@ -98,7 +111,7 @@ class RandomCenterCropDataset(Dataset):
             if self.output_channel == "C1":
                 mask[mask > 0] = 1
 
-        ## Crop around nuclei
+        ## Random crop around nuclei
         width, height = target.shape
         if self.augmentations:
             if random.random() < self.p:
@@ -124,15 +137,7 @@ class RandomCenterCropDataset(Dataset):
             image = crop(image, xmin, ymin, xmax, ymax)
             target = crop(target, xmin, ymin, xmax, ymax)
             mask = crop(mask, xmin, ymin, xmax, ymax)
-            # patch_loc = [
-            #     r - int(self.crop_size[0] / 2),
-            #     c - int(self.crop_size[1] / 2),
-            #     r + int(self.crop_size[0] / 2),
-            #     c + int(self.crop_size[1] / 2),
-            # ]
-            # image = get_patch(image, patch_loc)
-            # target = get_patch(target, patch_loc)
-            # mask = get_patch(mask, patch_loc)
+
         ## Standardization and Normalization
 
         if self.normalize:

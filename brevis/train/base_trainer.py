@@ -165,7 +165,7 @@ class BaseTrainer:
 
         if epoch % self.save_interval == 0:
             torch.save(
-                self.model.module.state_dict(),
+                self.model.state_dict(),
                 os.path.join(self.save_folder, f"model_epoch_{epoch}.pth"),
             )
 

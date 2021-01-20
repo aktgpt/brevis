@@ -21,6 +21,7 @@ fluorecscent_means_60x = np.array(stats_60x.iloc[:3]["mean"])
 
 
 class FastBaseDataset(Dataset):
+    ## For faster data procesing if the images are in .npy format
     def __init__(self, config, csv_file, augment=True):
         self.folder = config["folder"]
         self.standardize = config["standardize"]
@@ -50,7 +51,7 @@ class FastBaseDataset(Dataset):
 
         ## Get input patch of image and create stack of 7 brightfield images
         input_path = (
-            os.path.splitext(
+            os.path.splitext( 
                 os.path.join(
                     self.folder, mag_path, self.data.iloc[[idx]]["brightfield"].item(),
                 )
