@@ -36,3 +36,25 @@ The content and structure of the repo is given by the following:
 └── exp_stats               : .csv files for image statistics and train/test splits 
     
 ```
+
+The data should be structured as:
+```sh
+.
+|--"adipocyte_data"       :Base folder where images are stored
+|   |-- "60x images"    :What magnification the images are images at
+```
+
+
+## Data
+
+The image files in the magnification folder are named as ex AssayPlate_Greiner_#655090_{well}_T0001F0{FOV}L01A0{Action_nr}Z0{stack_nr}C0{channel}.tif where "well" and "FOV" are imported from exp_stats. "Action_nr" range from 1-4, stack_nr range from 1-7 for bright-field images and channel is one of C01 (Nuclei), C02 (Lipid droplets), C03 (Cytoplasm), C04 (Bright-field)
+
+## Training
+
+To train the models, modify the content in the config file that you want to run. For instance change the path to the data under "data" - "folder" and the training validation and test splits csv files under "data" -- ""train_csv_file", "validation_csv_file" and "test_csv_file". You can also specify other things such as model configurations, optimizers, learning rate ...
+
+To start training execute for instance for nuclei channel
+```sh
+python3 -m brevis -c configs/nuclei_train.json 
+```
+
