@@ -1,17 +1,16 @@
 {
-    "gpu_device":"0,1",  
-    "exp_folder": "exps",
-    "run_mode": "test",
+    "gpu_device":"0,1,2,3",  
+    "exp_folder": "exps_lipids",
+    "run_mode": "train",
     "test": {
       "tester": "BaseTester",
       "model_path": "model_best_loss.pth"
     },
     "train": {
       "trainer": "raLSGANTrainer",
-      "save_name": "split2",
+      "save_name": "split1",
       "epochs": 1900,
       "save_interval": 100,
-      "early_stop": 10,
       "pretrain": true,
       "n_pretrain_epochs":100,
       "load_pretrained": false,
@@ -101,9 +100,9 @@
     ],
     "data": {
       "dataset": "FastBaseDataset",
-      "folder": "/mnt/hdd2/datasets/astra_data_readonly/astra_data_readonly",
-      "train_csv_file": "exp_stats/ablation_train_split_2.csv",
-      "valid_csv_file": "exp_stats/ablation_valid_split_2.csv",
+      "folder": "adipocyte_data/",
+      "train_csv_file": "exp_stats/ablation_train_split_1.csv",
+      "valid_csv_file": "exp_stats/ablation_valid_split_1.csv",
       "test_csv_file": "exp_stats/final_test_all.csv",
       "magnification": "60x",
       "output_channel": "C2",

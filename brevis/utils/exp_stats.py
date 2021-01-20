@@ -2,7 +2,7 @@ import os
 
 import cv2
 import numpy as np
-from .read_images import YokogawaDataProcessor
+from .read_images import AdipocyteDataProcessor
 import pandas as pd
 
 
@@ -15,7 +15,7 @@ class ExperimentStatsGetter:
         self.mag_images = []
         self.channel_maps = []
         for i, mag_folder in enumerate(self.mag_folders):
-            folder_processor = YokogawaDataProcessor(mag_folder)
+            folder_processor = AdipocyteDataProcessor(mag_folder)
             well_images, channel_map = folder_processor.group_channels(groupby_prop=("well", "F"))
             self.mag_images.append(well_images)
             self.channel_maps.append(channel_map)
@@ -62,23 +62,4 @@ class ExperimentStatsGetter:
                 os.path.join(self.save_folder, f"{self.magnifications[i]}_stats.csv"), index=False
             )
 
-    # def get_channel_correlation(self, image):
-    #     mean = np.mean(image, axis=(1, 2))
-    #     std = np.std(image, axis=(1, 2))
-    #     n_pixels = image[0].size
-    #     corr_mat = np.zeros((len(image), len(image)))
-    #     for i in range(mean.shape[0]):
-    #         for j in range(mean.shape[0]):
-    #             if j <= i:
-    #                 continue
-    #             else:
-    #                 covar = (
-    #                     np.sum((image[i, :, :] - mean[i]) * (image[j, :, :] - mean[j])) / n_pixels
-    #                 )
-    #                 corr_mat[i, j] = covar / (std[i] * std[j])
-    #     for i in range(corr_mat.shape[0]):
-    #         for j in range(corr_mat.shape[1]):
-    #             if j > i:
-    #                 corr_mat[j, i] = corr_mat[i, j]
-    #     return corr_mat
 

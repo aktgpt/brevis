@@ -18,12 +18,8 @@ def run(config):
         train_dataset,
         batch_size=config["batch_size"],
         worker_init_fn=worker_init_fn,
-        shuffle=True,
+        shuffle=config["shuffle"],
         num_workers=16,
-        # prefetch_factor=4,
-        # persistent_workers=True,
-        drop_last=True,
-        # sampler=train_sampler
     )
     valid_dataset = getattr(data, config["dataset"])(
         config, config["valid_csv_file"], augment=False

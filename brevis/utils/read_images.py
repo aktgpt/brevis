@@ -30,7 +30,7 @@ def get_images_from_folder(image_source):
     return image_list
 
 
-class YokogawaDataProcessor:
+class AdipocyteDataProcessor:
     def __init__(self, image_source):
         self.image_source = image_source
         # data_folders = read_multiple_datasets(image_source)[:3]

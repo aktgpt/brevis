@@ -3,7 +3,7 @@ import cv2
 import glob
 import os
 
-im_folder = '/mnt/hdd2/datasets/astra_data_readonly/astra_data_readonly'
+im_folder = 'adipocyte_data'
 
 folders = ['20x_images', '40x_images', '60x_images']
 
