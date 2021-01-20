@@ -2,6 +2,8 @@
 
 In this repository we provide the code base that accompanies the paper:
 
+https://www.biorxiv.org/content/10.1101/2021.01.18.427121v1
+
 ## Learning to see colours: generating biologically relevant fluorescent labels from bright-field images
 
 #### by Håkan Wieslander, Ankit Gupta, Ebba Bergman, Erik Hallström and Philip J Harrison
