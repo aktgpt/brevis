@@ -23,7 +23,7 @@ The content and structure of the repo is given by the following:
 ```sh
 .
 ├── README.md
-├── ai_haste
+├── brevis
 │   ├── data                : python scripts for loading the datasets required
 │   ├── loss                : for loss functions not included in PyTorch
 │   ├── model               : python scripts for the various neural networks
@@ -31,7 +31,7 @@ The content and structure of the repo is given by the following:
 │   ├── train               : scripts requied when running the models in train mode
 │   └── utils               : utility functions (e.g. for converting the images to numpy arrays for faster data loading)
 │
-├── config                  : .json files for running the models to reconstruct the three fluorescence channels
+├── configs                 : .json files for running the models to reconstruct the three fluorescence channels
 │                       
 └── exp_stats               : .csv files for image statistics and train/test splits 
     
