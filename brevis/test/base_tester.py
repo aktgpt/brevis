@@ -71,7 +71,7 @@ class BaseTester:
                 preprocess_stats = sample[4]
 
                 input = sample[0].cuda().to(non_blocking=True)
-                target = sample[1][:, 1].unsqueeze(1).cuda().to(non_blocking=True)
+                target = sample[1].unsqueeze(1).cuda().to(non_blocking=True)
                 C_out = target.shape[1]
 
                 output = self.infer_full_image(input, C_out, kernel_size=512, stride=256)
