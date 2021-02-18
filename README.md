@@ -56,8 +56,14 @@ The image files in the magnification folder are named as ex AssayPlate_Greiner_#
 
 To train the models, modify the content in the config file that you want to run. For instance change the path to the data under "data" - "folder" and the training validation and test splits csv files under "data" -- ""train_csv_file", "validation_csv_file" and "test_csv_file". You can also specify other things such as model configurations, optimizers, learning rate ...
 
-To start training execute for instance for nuclei channel
+To start training execute for instance for nuclei channel:
 ```sh
 python3 -m brevis -c configs/nuclei_train.json 
 ```
 
+## Inference
+
+To run the pre-trained models on your own data, edit the config for the respective channel and put the `"run_mode"` to `"test"` and the path to the model in `"model_path"` in `"test"`. The data should be formatted in the same way as the mentioned on Data above. Then, to run the inference simply run the same command:
+```sh
+python3 -m brevis -c configs/nuclei_train.json 
+```
