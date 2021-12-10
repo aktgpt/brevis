@@ -2,9 +2,9 @@
 
 In this repository we provide the code base that accompanies the paper:
 
-https://www.biorxiv.org/content/10.1101/2021.01.18.427121v1
+https://doi.org/10.1371/journal.pone.0258546 
 
-## Learning to see colours: generating biologically relevant fluorescent labels from bright-field images
+## Learning to see colours: Biologically relevant virtual staining for adipocyte cell images
 
 #### by Håkan Wieslander, Ankit Gupta, Ebba Bergman, Erik Hallström and Philip J Harrison
 
